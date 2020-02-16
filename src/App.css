@@ -1,0 +1,16 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.movie {
+    display: flex;
+    width: 400px;
+    border-bottom: 1px solid #000000;
+}
+
+.movie > * {
+    padding: 10px;
+}

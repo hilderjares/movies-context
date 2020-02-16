@@ -1,5 +1,6 @@
 import React, { useContext, Fragment } from "react";
 import { MovieContext } from "../contexts/MovieContext";
+import Movie from "./Movie";
 
 function MovieList() {
     const movies = useContext(MovieContext)[0];
@@ -7,14 +8,12 @@ function MovieList() {
     return (
         <Fragment>
             {movies.map(movie => (
-                <>
-                    <ul key={movie.id}>
-                        <li> ID: {movie.id}</li>
-                        <li> Name: {movie.name}</li>
-                        <li> Price: {movie.price}</li>
-                    </ul>
-                    <hr />
-                </>
+                <Movie
+                    id={movie.id}
+                    name={movie.name}
+                    price={movie.price}
+                    key={movie.id}
+                />
             ))}
         </Fragment>
     );
